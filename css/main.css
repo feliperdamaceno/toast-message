@@ -1,0 +1,133 @@
+/* ==================== Import Section ==================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* ==================== General Styles ==================== */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+/* ==================== Container ==================== */
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+/* ==================== Form ==================== */
+
+.form-container {
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+}
+
+.form-input {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+/* ==================== Toast ==================== */
+
+.toast {
+  background-color: #000;
+  color: #fff;
+
+  border-radius: 0.5em;
+  margin: 2rem;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.toast-message {
+  margin: 0;
+  padding: 1rem;
+}
+
+.show-toast {
+  animation: toast-animation ease-in 500ms;
+  display: flex;
+}
+
+@keyframes toast-animation {
+  from {
+    opacity: 0;
+    margin-bottom: 0;
+  }
+
+  to {
+    opacity: 1;
+    margin-bottom: 2rem;
+  }
+}
+
+/* ==================== Buttons ==================== */
+
+.toast-show-button {
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+
+  border-radius: 0.5em;
+  border: 0;
+  outline: 0;
+
+  font-family: inherit;
+  font-size: inherit;
+
+  padding: 0.5em 1em;
+  width: fit-content;
+
+  cursor: pointer;
+  user-select: none;
+  transition: outline ease 250ms;
+}
+
+.toast-show-button:hover {
+  outline: 0.25em solid hsla(0, 0%, 0%, 0.5);
+}
+
+.toast-close-button {
+  background-color: transparent;
+  color: white;
+
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  outline: none;
+  border: 0;
+  opacity: 0.5;
+
+  cursor: pointer;
+  padding-left: 2rem;
+  padding-bottom: 0.42rem;
+  transition: opacity ease 250ms;
+}
+
+.toast-close-btn:hover {
+  opacity: 1;
+}
