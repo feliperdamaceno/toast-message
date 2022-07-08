@@ -1,5 +1,7 @@
 ## JavaScript: Toast Message Pop-Up
 
+![toast-message-showcase](app-showcase/toast-message-showcase.gif)
+
 This project is a simple implementation of a Toast Pop-Up in pure JavaScript.
 
 This small project was created in order to study DOM Manipulation. This implementation includes an input field to set the Toast Message and also clickable buttons totally functional.
